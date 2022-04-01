@@ -1,0 +1,28 @@
+html {
+font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+.container {
+    width: 1200px;
+    max-width: 1200px;
+}
+
+.container-full {
+    width: 100vw;
+    max-width: 1200px;
+}
+
+/*
+-- Bottoni riutilizzabili ma sub con left non radius ( tagliato)
+-- Titolo,sottotitoli h2 con due span dentro h1 verde no bold regular e nero bold
+-- Bold 500
+-- Border Radius 50% riutilizzabile
+-- Uppercase su div viola
+-- footer in black
+-- Link green with bold 500 riutilizzzabili
+-- 
+*/
