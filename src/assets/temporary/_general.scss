@@ -1,14 +1,19 @@
+@import "./variables";
+
 html {
-font-family: 'Roboto', sans-serif;
+font-family: 'Questrial', sans-serif;
+font-size: 14px;
+color: $brownemperor;
 }
 
 body {
-    background-color: white;
+    background-color:  $white;
 }
 
 .container {
     width: 1200px;
     max-width: 1200px;
+    margin: 0 auto;
 }
 
 .container-full {
@@ -24,5 +29,7 @@ body {
 -- Uppercase su div viola
 -- footer in black
 -- Link green with bold 500 riutilizzzabili
--- 
+-- Riporta dato solo con il dato degli oggetti
+-- form prevent default su form email
+-- footer dei link ( quella di Explore) con due sezioni diverse in  una sezione
 */
