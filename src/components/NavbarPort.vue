@@ -11,21 +11,22 @@
         </button>
       </li>
       <li>
-        <label for="search">
+        <form @submit.prevent="noReload">
           <input
             name="search"
             id="searchBar"
             class="searchBarClass"
             type="text"
-            v-bind="textToSearch"
+            v-model="textToSearch"
             placeholder="Search..."
+            @keyup.enter="search()"
           />
           <font-awesome-icon
             for="search"
             icon="fa-solid fa-magnifying-glass"
             class="search-icon"
           />
-        </label>
+        </form>
       </li>
     </ul>
   </nav>
@@ -64,6 +65,10 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    noReload() {},
+    search() {},
   },
 };
 </script>
