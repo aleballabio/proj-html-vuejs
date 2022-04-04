@@ -58,14 +58,59 @@
       </div>
     </div>
     <div class="cont-logos">
-      <img src="../assets/img/client-logo-01.png" alt="logo" class="logo" />
+      <div v-for="logo in logos" :key="logo.nome" class="logos">
+        <img :src="logo.img" :alt="logo.name" class="logo" />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import stylus from "../assets/img/client-logo-01.png";
+import tree from "../assets/img/client-logo-02.png";
+import brook from "../assets/img/client-logo-03.png";
+import pencil from "../assets/img/client-logo-04.png";
+import itsAlive from "../assets/img/client-logo-05.png";
+import sixBase from "../assets/img/client-logo-06.png";
+
 export default {
   name: "JumboPort",
+
+  data() {
+    return {
+      logos: [
+        {
+          nome: "stylus",
+          img: stylus,
+        },
+
+        {
+          nome: "tree",
+          img: tree,
+        },
+
+        {
+          nome: "brook",
+          img: brook,
+        },
+
+        {
+          nome: "pencil",
+          img: pencil,
+        },
+
+        {
+          nome: "itsalive",
+          img: itsAlive,
+        },
+
+        {
+          nome: "sixbase",
+          img: sixBase,
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -149,10 +194,21 @@ export default {
 .cont-logos {
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  .logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    flex-basis: calc(100% / 6 - 4rem);
+    flex-grow: 1;
+  }
 
   .logo {
-    margin: 1rem;
-    flex-basis: calc(100% / 6 - 2rem);
+    width: 50%;
   }
 }
 </style>
