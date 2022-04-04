@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h3 class="uppercase">Stimulated to learn?</h3>
+    <h3 class="uppercase unset">Stimulated to learn?</h3>
     <h2 class="title">Feature Online Courses</h2>
 
     <div class="cont-courses">
@@ -11,7 +11,9 @@
           </div>
         </div>
         <div class="right-cont">
-          <h2 v-if="course.price > 0" class="price">{{ course.price }}</h2>
+          <h2 v-if="course.price > 0" class="price">
+            ${{ course.price.toFixed(2) }}
+          </h2>
           <h2 v-else class="price">Free</h2>
           <h3 class="course-title">
             {{ course.nome }}
