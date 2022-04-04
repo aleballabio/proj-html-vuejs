@@ -12,7 +12,9 @@ body {
 
 .container {
     width: 1200px;
-    max-width: 1200px;
+    min-width: 1200px;
+    padding-left: 5px;
+    padding-right: 5px;
     margin: 0 auto;
 }
 
@@ -21,6 +23,74 @@ body {
     max-width: 1200px;
 }
 
+.circle {
+    border-radius: 100%;
+}
+
+.border-lg {
+    border: solid 2px $black;
+    padding: 2px;
+    overflow: hidden;
+}
+
+.border-sm {
+        border: solid 1px $black;
+        padding: 2px;
+        overflow: hidden;
+}
+
+h1 {
+    color: $darkblue;
+    font-size: 3.4rem;
+    line-height: 4rem;
+    padding-bottom: 1rem;
+}
+
+h3 {
+    color: $greyDark;
+    font-size: 1.1rem;
+    line-height: 2.2rem;
+    padding-bottom: 1rem;
+}
+
+.green-title  {
+    color: $green;
+}
+
+.button-green {
+    border: solid transparent 1px;
+    border-radius: 5px;
+    padding: 16px 50px;
+    background-color: $green;
+    color: $white;
+    font-weight: bold !important;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    .icon-right {
+        margin-left: .5em;
+        font-size: 1.2em;
+    }
+
+    .icon-left {
+        margin-right: .5em;
+        font-size: 1.2em;
+    }
+}
+
+.size-inherit {
+    font-size: inherit;
+}
+
+.circle-border {
+    background-color: transparent;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: solid 8px rgb(236, 197, 171);
+
+}
 /*
 -- Bottoni riutilizzabili ma sub con left non radius ( tagliato)
 -- Titolo,sottotitoli h2 con due span dentro h1 verde no bold regular e nero bold
