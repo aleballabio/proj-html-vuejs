@@ -3,35 +3,43 @@
     <div class="cont-title">
       <h3 class="uppercase opacity-title">Great words about Maxcoach</h3>
       <h2>Our <span class="unset-fw green">top learners'</span> verbatim</h2>
-
-      <div class="container-cards">
-        <div
-          class="card"
-          v-for="(card, index) in testimonialTop"
-          :key="card.id"
-          :class="activeIndex === index ? '' : 'opacity'"
-        >
-          <h2 class="card-title">
-            {{ card.title }}
-          </h2>
-          <p class="p-large">
-            {{ card.text }}
-          </p>
-          <div class="profile-testimonial">
-            <img
-              :src="card.picture"
-              :alt="card.nome + card.surname"
-              class="profile-picture circle"
-            />
-            <span
-              ><h2 class="profile-title uppercase">
-                {{ card.name + card.surname }}
-              </h2>
-              <p>/ {{ card.role }}</p></span
-            >
-          </div>
+    </div>
+    <div class="container-cards">
+      <div
+        class="card"
+        v-for="(card, index) in testimonialTop"
+        :key="card.id"
+        :class="activeIndex === index ? '' : 'opacity'"
+      >
+        <h2 class="card-title">
+          {{ card.title }}
+        </h2>
+        <p class="p-large">
+          {{ card.text }}
+        </p>
+        <div class="profile-testimonial">
+          <img
+            :src="card.picture"
+            :alt="card.nome + card.surname"
+            class="profile-picture circle"
+          />
+          <span
+            ><h2 class="profile-title uppercase">
+              {{ card.nome }} {{ card.surname }}
+            </h2>
+            <p>/ {{ card.role }}</p></span
+          >
         </div>
       </div>
+    </div>
+
+    <div class="cont-selectors">
+      <div
+        v-for="(circleTest, index) in testimonialProfiles"
+        :key="circleTest.id"
+        class="selector circle"
+        :class="activeIndex === index ? 'selected' : ''"
+      ></div>
     </div>
   </div>
 </template>
@@ -108,6 +116,10 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/temporary/variables";
 
+.container-full {
+  padding-bottom: 100px;
+}
+
 .cont-title {
   text-align: center;
   padding-bottom: 5rem;
@@ -148,7 +160,7 @@ export default {
       }
 
       .profile-title {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
         padding: 0;
       }
 
@@ -160,6 +172,26 @@ export default {
 
   .opacity {
     opacity: 0.5;
+  }
+}
+
+.cont-selectors {
+  text-align: center;
+
+  .selector {
+    background-color: $greyDark;
+    border: solid 1px $greyDark;
+    width: 8px;
+    height: 8px;
+    opacity: 0.5;
+    margin: 0.8rem;
+    display: inline-block;
+  }
+  .selected {
+    background-color: $darkblue;
+    border-color: $darkblue;
+    transform: scale(1.6);
+    opacity: unset;
   }
 }
 </style>
