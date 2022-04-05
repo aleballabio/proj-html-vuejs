@@ -27,24 +27,68 @@
         />
       </div>
     </div>
+
+    <div class="cont-cards-awards">
+      <card-awards
+        v-for="award in arrAwards"
+        :key="award.number"
+        :award-data="award"
+      />
+    </div>
   </div>
 </template>
 
 <script>
+import CardAwards from "./subComponents/CardAwards.vue";
+
 export default {
   name: "OnlineCertification",
+  components: {
+    CardAwards,
+  },
+
+  data() {
+    return {
+      arrAwards: [
+        {
+          category: "Trained",
+          how: "Succesfully",
+          number: 1790,
+          who: "Enrolled Learners",
+        },
+
+        {
+          category: "Received",
+          how: "Proudly",
+          number: 19,
+          who: "Countrywide Awards",
+        },
+
+        {
+          category: "Established",
+          how: "Firmly",
+          number: 24,
+          who: "Local Branches",
+        },
+
+        {
+          category: "Featured on",
+          how: "Getting",
+          number: 1090,
+          who: "Blog Posts",
+        },
+      ],
+    };
+  },
 };
 </script>
 
 <style scoped lang="scss">
-.container {
-  padding-bottom: 150px;
-}
-
 .cont-cert {
   text-align: center;
   display: flex;
   justify-content: space-between;
+  padding-bottom: 150px;
 
   .cont-text {
     flex-grow: 10;
@@ -72,5 +116,11 @@ export default {
   .max-shape-two {
     padding-top: 6rem;
   }
+}
+
+.cont-cards-awards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
