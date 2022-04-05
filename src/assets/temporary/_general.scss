@@ -90,6 +90,14 @@ h3 {
     font-size: inherit;
 }
 
+.circle-border-sm {
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid 7px rgb(230, 220, 210);
+}
+
 .circle-border {
     background-color: transparent;
     width: 60px;

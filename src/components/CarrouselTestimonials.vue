@@ -152,6 +152,7 @@ export default {
 
     .profile-testimonial {
       display: flex;
+      padding-top: 0.5rem;
 
       .profile-picture {
         width: 75px;
