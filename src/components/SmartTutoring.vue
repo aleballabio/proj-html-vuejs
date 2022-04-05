@@ -108,16 +108,9 @@ export default {
       font-size: 1.8rem;
     }
 
-    p {
-      font-size: 1.1rem;
-      line-height: 2rem;
-      padding-bottom: 2rem;
-    }
-
     a {
-      color: $greyDark;
-      font-weight: bold;
       color: $greydarkdark;
+      font-weight: bold;
     }
 
     .arrow-long {
