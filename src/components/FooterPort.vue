@@ -1,5 +1,13 @@
 <template>
-  <footer></footer>
+  <footer>
+    <div class="container">
+      <div class="cont-titles"></div>
+      <div class="address">
+        <h3 class="category"></h3>
+      </div>
+      <div></div>
+    </div>
+  </footer>
 </template>
 
 <script>
